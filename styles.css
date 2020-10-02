@@ -116,6 +116,11 @@ h1 {
     color: white;
 }
 
+h3 {
+    font-size: 2rem;
+    color: white; 
+}
+
 @media screen and (max-width: 50em) {
     .conctact {
          flex-direction: column;
