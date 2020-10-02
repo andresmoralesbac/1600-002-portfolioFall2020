@@ -113,4 +113,15 @@ figure img {
 
 h1 {
     font-size: 3rem;
+    color: white;
+}
+
+@media screen and (max-width: 50em) {
+    .conctact {
+         flex-direction: column;
+         align-items: center;
+    }
+    #welcome-section {
+        background-image: linear-gradient(90deg, #5db34b 0%, #e4a00c 100%);
+    }
 }
