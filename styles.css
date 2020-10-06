@@ -47,11 +47,16 @@ a {
 
 #welcome-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 100vh;
     background-color: #000;
+}
+
+#profile-picture {
+  padding: 3rem; 
+
 }
 
 .projects-section {
@@ -119,7 +124,7 @@ h1 {
 }
 
 h3 {
-    padding: 2rem;
+    padding: 3rem;
     font-size: 2rem;
     color: white; 
     font-weight: 300;
@@ -127,7 +132,7 @@ h3 {
 }
 
 h4 {
-  padding: 2rem;
+  padding: 3rem;
   font-size: 2rem;
   color: white; 
   font-weight: lighter;
