@@ -1,5 +1,4 @@
-import { films } from './data/films.js'
-import { people } from './data/people.js'
+import { films } from '../data/films.js'
 
 // console.log(document.body.children)
 
