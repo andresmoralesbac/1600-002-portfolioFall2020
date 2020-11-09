@@ -1,8 +1,22 @@
 import { starships } from '../data/starships.js'
+import { removeChildren, getLastNumber } from '../utils/index.js'
 
 const nav = document.querySelector('.nav')
 const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.main')
+
+const dialogue = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+
+modalBackground.addEventListener('click', () => {
+    dialogue.classList.toggle('is-active')
+})
+
+closeButton.addEventListener('click', () => {
+    dialogue.classList.toggle('is-active')
+})
+
 
 function populateNav(starships) {
     starships.forEach(starship => {
@@ -25,8 +39,43 @@ function populateNav(starships) {
 }
 
 function populateShipView(shipData) {
-    console.log(shipData)
+    removeChildren(shipView)
+    let shipImage = document.createElement("img")
+    let shipNum = getLastNumber(shipData.url)
+    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
+    shipImage.addEventListener('error', () => {
+        shipImage.hidden = true
+        dialogue.classList.toggle('is-active')
+
+    })
+    shipView.appendChild(shipImage)
 }
 
 populateNav(starships)
+
+function addStarField(element, numStarts) {
+    element.style.setProperty('background-color', 'black')
+    for (let i = 0; i< numStarts; i++) {
+        let star = document.createElement('div')
+        star.style.setProperty('position', 'absolute')
+        star.style.setProperty('width','2px')
+        star.style.setProperty('height','2px')
+        star.style.setProperty('background-color','white')
+        let xy = getRandomPosition ()
+        star.style.left = `${xy[0]}px`
+        star.style.top = `${ xy[1]}px`
+        element.appendChild(star)
+    }
+} 
+
+function getRandomPosition() {
+    let y = document.body.scrollHeight
+    let x = document.body.scrollWidth
+    let randomY = Math.floor(Math.random() * y)
+    let randomX = Math.floor(Math.random() * x)
+    return [randomX, randomY]
+}
+
+addStarField(document.querySelector('body'), 1000)
+
 

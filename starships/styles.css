@@ -3,6 +3,14 @@
     box-sizing: border-box;
 }
 
+.container {
+    display: flex;
+}
+
+.main {
+    margin-top: 8rem;
+}
+
 header, footer {
     display: flex;
     justify-content:center;
