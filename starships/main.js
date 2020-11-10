@@ -5,9 +5,11 @@ const nav = document.querySelector('.nav')
 const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.main')
 
+
 const dialogue = document.querySelector('.modal')
 const closeButton = document.querySelector('.modal-close')
 const modalBackground = document.querySelector('.modal-background')
+
 
 modalBackground.addEventListener('click', () => {
     dialogue.classList.toggle('is-active')
