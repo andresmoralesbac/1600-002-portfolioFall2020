@@ -8,6 +8,16 @@ html {
     scroll-behavior: smooth;
     font-size: 62.5%;
 }
+
+figcaption {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 2rem;
+    padding-top: 2rem;
+
+
+}
+
 a {
     text-decoration: none;
     color: #f0f0f0;
@@ -63,6 +73,7 @@ a {
     text-align: center;
     padding: 5rem 2rem;
     background: #45567d;
+
   }
 
 
@@ -113,9 +124,20 @@ a {
   .contact-details:hover {
     transform: translateY(8px);
   }
+
+figure {
+  max-height: 20rem;
+  max-width: 20rem;
+  margin: 2rem;
+
+}
+
 figure img {
     width: 20rem;
 }
+
+
+
 
 h1 {
     padding: 3rem;

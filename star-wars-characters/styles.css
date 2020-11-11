@@ -1,20 +1,51 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 
 .mainHeader {
     display: flex;
     justify-content: space-evenly;
-    margin: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: gold;
 }
 
 #main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    background-color: black;
+    color: gold;
 }
+
+button {
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: darkred;
+    color: white;
+  }
 
 figure img {
     max-height: 12rem;
+    padding: 1rem;
+}
+
+figcaption {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+
 }
