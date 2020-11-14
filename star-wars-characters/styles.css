@@ -33,7 +33,7 @@ button {
     transition-duration: 0.4s;
 }
 
-.button:hover {
+button:hover {
     background-color: darkred;
     color: white;
   }
@@ -41,6 +41,7 @@ button {
 figure img {
     max-height: 12rem;
     padding: 1rem;
+    
 }
 
 figcaption {
