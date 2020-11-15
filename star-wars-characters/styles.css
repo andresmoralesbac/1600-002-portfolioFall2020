@@ -41,6 +41,7 @@ button:hover {
 figure img {
     max-height: 12rem;
     padding: 1rem;
+    transition: padding 0.5s;
     
 }
 

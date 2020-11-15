@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="tabs.css">
+    <title>TabsExperiment</title>
 </head>
 <body>
-    
+    <main class="mainContainer">
+    <div class="tabs">
+        <ul>
+          <li class="characters"><a>Characters</a></li>
+          <li class="starships"><a>Starships</a></li>
+          <li class="films"><a>Films</a></li>
+        </ul>
+      </div>
+      <iframe class="mainFrame"></iframe>
+    </main>
+    <script src="tabs.js" type="module"></script>
 </body>
 </html>
