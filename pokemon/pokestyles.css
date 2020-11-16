@@ -1,0 +1,11 @@
+.pokemonGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pokeCard {
+    background-color: aqua;
+    width: 200px;
+    height: 250px;
+}
