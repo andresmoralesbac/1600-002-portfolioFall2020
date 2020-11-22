@@ -23,7 +23,7 @@ function loadPage() {
 
 const pokeGrid = document.querySelector('.pokemonGrid')
 const loadButton = document.querySelector('.load')
-const newPokemomButton = document.querySelector('.newPokemon')
+const newPokemonButton = document.querySelector('.newPokemon')
 
 newPokemonButton.addEventListener('click', () => {
     let pokeName = prompt('What is your new Pokemon name?')
