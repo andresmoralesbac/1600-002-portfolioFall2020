@@ -1,0 +1,13 @@
+body {
+    background: lightgray;
+}
+
+header {
+    text-align: center;
+}
+
+.senatorGrid {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
