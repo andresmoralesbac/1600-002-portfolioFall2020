@@ -9,5 +9,11 @@ header {
 .senatorGrid {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
+
+.congressPic {
+    border: ridge;
+
+}
+

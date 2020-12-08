@@ -21,11 +21,18 @@ function populateSenatorDiv(simpleSenators) {
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
         let partyIcon = document.createElement('i')
+        figImg.className = 'congressPic'
         if (senator.party === 'R') partyIcon.className = 'fas fa-republican'
         if (senator.party === 'D') partyIcon.className = 'fas fa-democrat'
         if (senator.party === 'ID') partyIcon.className = 'fas fa-star'
         figImg.src = senator.imgURL
         figCaption.textContent = senator.name 
+        
+       figImg.addEventListener('mouseenter', () => {
+            if (senator.party === 'R') figImg.style.border.toggle ('3px solid red')
+            if (senator.party === 'D') figImg.style.border.toggle('3px solid blue')
+            if (senator.party === 'ID') figImg.style.border.toggle ('3px solid gold')
+        })
 
         figCaption.appendChild(partyIcon)
         senFigure.appendChild(figImg)
@@ -55,7 +62,7 @@ function getSimplifiedSenators(senatorArray) {
 
 const filterSenators = (prop, value) => {
     return getSimplifiedSenators(senators).filter(senator =>{
-        return senator.[prop]
+        return senator[prop]
     })
 }
 
@@ -72,11 +79,14 @@ function birthdaySort () {
     }))
 }
 
+
+
 function senioritySort () {
     populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
         return a.date_of_birth - b.date_of_birth
     }))    
 }
+
 
 console.log(mostSeniority, missedVotes, republicans, democrats)
 populateSenatorDiv(getSimplifiedSenators(senators))
