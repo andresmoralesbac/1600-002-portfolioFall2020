@@ -22,15 +22,12 @@ function populateSenatorDiv(simpleSenators) {
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
         let partyIcon = document.createElement('i')
-        // figImg.className = 'congressPic'
         if (senator.party === 'R') partyIcon.className = 'fas fa-republican'
         if (senator.party === 'D') partyIcon.className = 'fas fa-democrat'
         if (senator.party === 'ID') partyIcon.className = 'fas fa-star'
         figImg.src = senator.imgURL
         figCaption.textContent = senator.name 
-
-        console.log('string')
-    
+        figCaption.className = 'figcaption'
         figCaption.appendChild(partyIcon)
         senFigure.appendChild(figImg)
         senFigure.appendChild(figCaption)
@@ -40,18 +37,19 @@ function populateSenatorDiv(simpleSenators) {
         
 
         figImg.addEventListener('mouseenter', () => {
-            if (senator.party === 'R') figImg.style.border = '3px solid red'
-            if (senator.party === 'D') figImg.style.border = '3px solid blue'
-            if (senator.party === 'ID') figImg.style.border = '3px solid gold'
-            figImg.style.transition = 'border 0.3s'
+            if (senator.party === 'R') figImg.style.border = '5px solid red'
+            if (senator.party === 'D') figImg.style.border = '5px solid blue'
+            if (senator.party === 'ID') figImg.style.border = '5px solid gold'
+            figImg.style.transition = 'border 0.2s'
         })
 
         figImg.addEventListener('mouseout', () => {
             if (senator.party === 'R') figImg.style.border = '3px solid lightgray'
             if (senator.party === 'D') figImg.style.border = '3px solid lightgray'
             if (senator.party === 'ID') figImg.style.border = '3px solid lightgray'
-            figImg.style.transition = 'border 0.5s'
+            figImg.style.transition = 'border 0.3s'
         })
+        
     });
 }
 
