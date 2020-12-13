@@ -15,13 +15,15 @@ birthdayButton.addEventListener('click', () => {
 
 function populateSenatorDiv(simpleSenators) {
     removeChildren(senatorGrid)
-    console.log(simpleSenators)
+    // console.log(simpleSenators)
     simpleSenators.forEach(senator => {
         let senDiv = document.createElement('div')
         let senFigure = document.createElement('figure')
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
         let partyIcon = document.createElement('i')
+        let senInfo = document.createElement('p')
+        senInfo.src = senator.office
         if (senator.party === 'R') partyIcon.className = 'fas fa-republican'
         if (senator.party === 'D') partyIcon.className = 'fas fa-democrat'
         if (senator.party === 'ID') partyIcon.className = 'fas fa-star'
@@ -31,9 +33,14 @@ function populateSenatorDiv(simpleSenators) {
         figCaption.appendChild(partyIcon)
         senFigure.appendChild(figImg)
         senFigure.appendChild(figCaption)
+        figCaption.appendChild(senInfo)
         senDiv.appendChild(senFigure)
         // senDiv.appendChild(progressBars(senator))
         senatorGrid.appendChild(senDiv)   
+        figImg.className = 'senPic'
+        senDiv.addEventListener('click', function () { 
+            figImg.classList.toggle('figImg')
+        })
         
 
         figImg.addEventListener('mouseenter', () => {
@@ -52,6 +59,13 @@ function populateSenatorDiv(simpleSenators) {
         
     });
 }
+
+// function getSenAdd(senatorArray) {
+//     return senatorArray.map(senator => {
+//         let senAddress = senator.office
+//         console.log(senAddress)
+//     })
+// }
 
 function getSimplifiedSenators(senatorArray) {
     return senatorArray.map(senator => {
