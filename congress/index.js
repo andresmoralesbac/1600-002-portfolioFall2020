@@ -4,13 +4,18 @@ import { removeChildren } from '../utils/index.js'
 const senatorGrid = document.querySelector('.senatorGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const birthdayButton = document.querySelector('#birthdayButton')
+const loyaltyButton = document.querySelector('#loyaltyButton')
 
 seniorityButton.addEventListener('click', () => {
-    seniortiySort()
+    senioritySort()
 })
 
 birthdayButton.addEventListener('click', () => {
     birthdaySort()
+})
+
+loyaltyButton.addEventListener('click', () => {
+    loyaltySort()
 })
 
 function populateSenatorDiv(simpleSenators) {
@@ -100,6 +105,12 @@ const missedVotes = getSimplifiedSenators(senators).reduce((acc, senator) => acc
 function birthdaySort () {
     populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
         return a.seniority - b.seniority
+    }))
+}
+
+function loyaltySort () {
+    populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
+        return a.loyaltyPct - b.loyaltyPct
     }))
 }
 
