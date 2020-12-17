@@ -21,7 +21,13 @@ figcaption {
 a {
     text-decoration: none;
     color: #f0f0f0;
+    transition: background-color .5s;
+    border-radius: 2rem;
   }
+
+a:hover {
+  background-color: gold;
+}
 
 #navbar {
     display: flex; 
