@@ -11,7 +11,7 @@ async function getApiData(url) {
 }
 // now use ther async getAPIDatafunction 
 function loadPage() {
-    getApiData(`https://pokeapi.co/api/v2/pokemon`).then //?limit=25&offset=149`).then
+    getApiData(`https://pokeapi.co/api/v2/pokemon?limit=25`).then //?limit=25&offset=149`).then
         (async (data) => {
             for (const pokemon of data.results) {
                 await getApiData(pokemon.url).then((pokeData) => {
